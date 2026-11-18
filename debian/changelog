@@ -1,3 +1,9 @@
+linux-base (4.17+lingmo5u1) unstable; urgency=medium
+
+  * Rebuild for Lingmo OS.
+
+ -- Lingmo OS Team <team@lingmo.org>  Thu, 19 Nov 2026 01:15:00 +0800
+
 linux-base (4.17) unstable; urgency=medium
 
   * Also copy config file to /boot.

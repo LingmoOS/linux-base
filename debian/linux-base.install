@@ -1,0 +1,3 @@
+bin usr
+lib/DebianLinux.pm usr/share/perl5
+kernel usr/share

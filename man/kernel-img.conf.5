@@ -1,0 +1,85 @@
+.\" Hey, Emacs! This is an -*- nroff -*- source file.
+.\" Copyright (c) 2000 Manoj Srivastava <srivasta@debian.org>
+.\" Copyright 2019 Ben Hutchings <benh@debian.org>
+.\"
+.\" This is free documentation; you can redistribute it and/or
+.\" modify it under the terms of the GNU General Public License as
+.\" published by the Free Software Foundation; either version 2 of
+.\" the License, or (at your option) any later version.
+.\"
+.\" The GNU General Public License's references to "object code"
+.\" and "executables" are to be interpreted as the output of any
+.\" document formatting or typesetting system, including
+.\" intermediate and printed output.
+.\"
+.\" This manual is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public
+.\" License along with this manual; if not, write to the Free
+.\" Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139,
+.\" USA.
+.\"
+.TH KERNEL\-IMG.CONF 5 "25 May 2025" Debian "Debian GNU/Linux manual"
+.\" NAME should be all caps, SECTION should be 1-8, maybe w/ subsection
+.\" other parms are allowed: see man(7), man(1)
+.SH NAME
+kernel\-img.conf \- configuration file for Linux kernel packages
+.SH SYNOPSIS
+.I /etc/kernel\-img.conf
+.SH DESCRIPTION
+The file
+.I /etc/kernel\-img.conf
+is used by the kernel package installation and removal process to
+allow local options for handling some aspects of the installation.
+.PP
+Not all kernel image package creators support this file:
+.TS
+nokeep;
+l	l.
+\fBPackage creator\fR	\fBStatus\fR
+Debian linux source package	supported
+Ubuntu linux source package	supported
+make deb\-pkg	ignored
+.TE
+.PP
+The format of the file is a simple
+.IB VAR = VALUE
+pair. Boolean values may be specified as
+.IR Yes ,
+.IR True ,
+.IR 1 ,
+and
+.IR No ,
+.IR False ,
+.IR 0 ,
+and are case insensitive.
+This file is automatically created by the installation script in
+certain circumstances.
+.PP
+At the moment, the user modifiable variables supported are:
+.TP
+.B do_symlinks
+If set, the postinst and postrm scripts will maintain symlinks to
+default kernel and initramfs images, as described in
+\fIlinux\-update\-symlinks\fR(8).  This variable is set by default.
+.TP
+.B image_dest
+Set this variable to the directory in which symlinks to the
+default kernel and initramfs images should be maintained.  The
+default value is \fI/\fR.
+.TP
+.B link_in_boot
+If set, this has the same effect as \fIimage_dest\ =\ /boot\fR
+and overrides any other setting of \fBimage_dest\fR.  This
+variable is unset by default.
+.SH FILES
+The file described here is
+.IR /etc/kernel\-img.conf .
+.SH SEE ALSO
+.BR linux\-update\-symlinks (8)
+.SH AUTHOR
+This manual page was written by Manoj Srivastava <srivasta@debian.org>
+and Ben Hutchings <benh@debian.org> for the Debian GNU/Linux system.

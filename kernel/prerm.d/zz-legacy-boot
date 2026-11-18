@@ -1,0 +1,20 @@
+#!/bin/sh
+# SPDX-License-Identifier: GPL-2.0
+set -eu
+
+version=$1
+image=$2
+
+set -- ${DEB_MAINT_PARAMS:-unknown}
+
+if [ "$1" = remove ]; then
+  image_input=/usr/lib/modules/${version}/vmlinuz
+  config_input=/usr/lib/modules/${version}/config
+  config=$(dirname $image)/config-${version}
+  if [ -e "$image_input" ]; then
+    rm -f "$image"
+  fi
+  if [ -e "$config_input" ]; then
+    rm -f "$config"
+  fi
+fi

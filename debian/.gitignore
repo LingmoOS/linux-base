@@ -1,0 +1,8 @@
+/.debhelper
+/debhelper-build-stamp
+/files
+/linux-base/
+/linux-sysctl-defaults/
+/*.debhelper
+/*.debhelper.log
+/*.substvars

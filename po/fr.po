@@ -1,0 +1,260 @@
+# French translation of linux-base manual pages.
+# Copyright (C) 2007, 2009, 2010, 2012, 2014, 2021, Debian French l10n team <debian-l10n-french@lists.debian.org>.
+# This file is distributed under the same license as the linux-base package.
+#
+# Sylvain Cherrier <sylvain.cherrier@free.fr>, 2007, 2009.
+# David Prévot <david@tilapin.org>, 2010, 2012, 2014.
+# bubu <bubub@no-log.org>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: linux-base\n"
+"POT-Creation-Date: 2025-05-25 20:05+0200\n"
+"PO-Revision-Date: 2025-05-25 20:03+0200\n"
+"Last-Translator: bubu <bubub@no-log.org>\n"
+"Language-Team: French <debian-l10n-french@lists.debian.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# type: TH
+#. type: TH
+#: man/kernel-img.conf.5:25
+#, no-wrap
+msgid "KERNEL-IMG.CONF"
+msgstr "KERNEL-IMG.CONF"
+
+#. type: TH
+#: man/kernel-img.conf.5:25
+#, no-wrap
+msgid "25 May 2025"
+msgstr "25 mai 2025"
+
+# type: TH
+#. type: TH
+#: man/kernel-img.conf.5:25
+#, no-wrap
+msgid "Debian"
+msgstr "Debian"
+
+# type: TH
+#. type: TH
+#: man/kernel-img.conf.5:25
+#, no-wrap
+msgid "Debian GNU/Linux manual"
+msgstr "Manuel Debian GNU/Linux"
+
+# type: SH
+#.  NAME should be all caps, SECTION should be 1-8, maybe w/ subsection
+#.  other parms are allowed: see man(7), man(1)
+#. type: SH
+#: man/kernel-img.conf.5:28
+#, no-wrap
+msgid "NAME"
+msgstr "NOM"
+
+# type: Plain text
+#. type: Plain text
+#: man/kernel-img.conf.5:30
+msgid "kernel-img.conf - configuration file for Linux kernel packages"
+msgstr ""
+"kernel-img.conf - Fichier de configuration pour les paquets du noyau Linux"
+
+# type: SH
+#. type: SH
+#: man/kernel-img.conf.5:30
+#, no-wrap
+msgid "SYNOPSIS"
+msgstr "SYNOPSIS"
+
+# type: Plain text
+#. type: Plain text
+#: man/kernel-img.conf.5:32
+msgid "I</etc/kernel-img.conf>"
+msgstr "I</etc/kernel-img.conf>"
+
+# type: SH
+#. type: SH
+#: man/kernel-img.conf.5:32
+#, no-wrap
+msgid "DESCRIPTION"
+msgstr "DESCRIPTION"
+
+# type: Plain text
+#. type: Plain text
+#: man/kernel-img.conf.5:37
+msgid ""
+"The file I</etc/kernel-img.conf> is used by the kernel package installation "
+"and removal process to allow local options for handling some aspects of the "
+"installation."
+msgstr ""
+"Le fichier I</etc/kernel-img.conf> est utilisé par le processus "
+"d'installation et de supression du paquet du noyau pour autoriser le "
+"traitement de quelques aspects de l'installation par des options locales."
+
+#. type: Plain text
+#: man/kernel-img.conf.5:39
+msgid "Not all kernel image package creators support this file:"
+msgstr "Tous les créateurs de paquets d'images de noyau ne prennent pas en charge ce fichier:"
+
+#. type: tbl table
+#: man/kernel-img.conf.5:42
+#, no-wrap
+msgid "B<Package creator>"
+msgstr "B<Package creator>"
+
+#. type: tbl table
+#: man/kernel-img.conf.5:42
+#, no-wrap
+msgid "B<Status>"
+msgstr "B<Status>"
+
+#. type: tbl table
+#: man/kernel-img.conf.5:43
+#, no-wrap
+msgid "Debian linux source package"
+msgstr "Paquet source linux Debian "
+
+#. type: tbl table
+#: man/kernel-img.conf.5:43 man/kernel-img.conf.5:44
+#, no-wrap
+msgid "supported"
+msgstr "pris en charge"
+
+#. type: tbl table
+#: man/kernel-img.conf.5:44
+#, no-wrap
+msgid "Ubuntu linux source package"
+msgstr "paquet source linux Ubuntu"
+
+#. type: tbl table
+#: man/kernel-img.conf.5:45
+#, no-wrap
+msgid "make deb-pkg"
+msgstr "make deb-pkg"
+
+#. type: tbl table
+#: man/kernel-img.conf.5:45
+#, no-wrap
+msgid "ignored"
+msgstr "ignoré"
+
+# type: Plain text
+#. type: Plain text
+#: man/kernel-img.conf.5:61
+msgid ""
+"The format of the file is a simple I<VAR>B<=>I<VALUE> pair. Boolean values "
+"may be specified as I<Yes>, I<True>, I<1>, and I<No>, I<False>, I<0>, and "
+"are case insensitive.  This file is automatically created by the "
+"installation script in certain circumstances."
+msgstr ""
+"Le format de ce fichier consiste simplement en paires "
+"I<VARIABLE>B<=>I<VALEUR>. Les valeurs booléennes peuvent être fixées à "
+"I<Yes>, I<True>, I<1>, ou I<No>, I<False>, I<0>, sans distinction entre les "
+"majuscules et les minuscules. Ce fichier est automatiquement créé par le "
+"script d'installation dans certaines circonstances."
+
+# type: Plain text
+#. type: Plain text
+#: man/kernel-img.conf.5:63
+msgid "At the moment, the user modifiable variables supported are:"
+msgstr ""
+"Les variables actuellement modifiables par l'utilisateur sont les "
+"suivantes\\ :"
+
+#. type: TP
+#: man/kernel-img.conf.5:63
+#, no-wrap
+msgid "B<do_symlinks>"
+msgstr "B<do_symlinks>"
+
+#. type: Plain text
+#: man/kernel-img.conf.5:68
+msgid ""
+"If set, the postinst and postrm scripts will maintain symlinks to default "
+"kernel and initramfs images, as described in I<linux-update-symlinks>(8).  "
+"This variable is set by default."
+msgstr ""
+"Quand cette variable est déclarée, les scripts postinst et postrm "
+"maintiendront les liens symboliques vers les images du noyau et du disque "
+"mémoire initial par défaut, comme expliqué dans I<linux-update-symlinks>(8). "
+"Cette variable est active par défaut."
+
+#. type: TP
+#: man/kernel-img.conf.5:68
+#, no-wrap
+msgid "B<image_dest>"
+msgstr "B<image_dest>"
+
+#. type: Plain text
+#: man/kernel-img.conf.5:73
+msgid ""
+"Set this variable to the directory in which symlinks to the default kernel "
+"and initramfs images should be maintained.  The default value is I</>."
+msgstr ""
+"Indiquer dans cette variable le dossier dans lequel les liens symboliques "
+"vers les images du noyau et du disque mémoire initial par défaut devraient "
+"être maintenus. La valeur par défaut est I</>."
+
+# type: TP
+#. type: TP
+#: man/kernel-img.conf.5:73
+#, no-wrap
+msgid "B<link_in_boot>"
+msgstr "B<link_in_boot>"
+
+#. type: Plain text
+#: man/kernel-img.conf.5:78
+msgid ""
+"If set, this has the same effect as I<image_dest\\ =\\ /boot> and overrides "
+"any other setting of B<image_dest>.  This variable is unset by default."
+msgstr ""
+"Quand cette variable est déclarée, cela a le même effet que "
+"I<image_dest\\=\\ /boot> et écrase tout autre réglage de B<image_dest>. "
+"Cette variable n'a pas de valeur par défaut."
+
+# type: SH
+#. type: SH
+#: man/kernel-img.conf.5:78
+#, no-wrap
+msgid "FILES"
+msgstr "FICHIERS"
+
+# type: Plain text
+#. type: Plain text
+#: man/kernel-img.conf.5:81
+msgid "The file described here is I</etc/kernel-img.conf>."
+msgstr "Le fichier décrit ici est I</etc/kernel-img.conf>."
+
+# type: SH
+#. type: SH
+#: man/kernel-img.conf.5:81
+#, no-wrap
+msgid "SEE ALSO"
+msgstr "VOIR AUSSI"
+
+# type: Plain text
+#. type: Plain text
+#: man/kernel-img.conf.5:83
+msgid "B<linux-update-symlinks>(8)"
+msgstr "B<linux-update-symlinks>(8)"
+
+# type: SH
+#. type: SH
+#: man/kernel-img.conf.5:83
+#, no-wrap
+msgid "AUTHOR"
+msgstr "AUTEUR"
+
+#. type: Plain text
+#: man/kernel-img.conf.5:85
+msgid ""
+"This manual page was written by Manoj Srivastava "
+"E<lt>srivasta@debian.orgE<gt> and Ben Hutchings E<lt>benh@debian.orgE<gt> "
+"for the Debian GNU/Linux system."
+msgstr ""
+"Cette page de manuel a été écrite par Manoj Srivastava "
+"E<lt>srivasta@debian.orgE<gt> et Ben Hutchings E<lt>benh@debian.orgE<gt> "
+"pour le système Debian GNU/Linux."
